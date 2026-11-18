@@ -1,0 +1,10 @@
+[
+	{
+		"name": "apiKey",
+		"type": "password",
+		"label": "API Key",
+		"required": true,
+		"editable": true,
+		"help": "Starts with `sk_`. Create it in your QRavate account, under **API et webhooks** (Pro and Max plans)."
+	}
+]

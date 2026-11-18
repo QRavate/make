@@ -1,0 +1,79 @@
+[
+	{
+		"name": "event",
+		"type": "text",
+		"label": "Event"
+	},
+	{
+		"name": "created_at",
+		"type": "date",
+		"label": "Event date"
+	},
+	{
+		"name": "qr",
+		"type": "collection",
+		"label": "QR code",
+		"spec": [
+			{
+				"name": "id",
+				"type": "text",
+				"label": "ID"
+			},
+			{
+				"name": "code",
+				"type": "text",
+				"label": "Code"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "type",
+				"type": "text",
+				"label": "Type"
+			},
+			{
+				"name": "destination",
+				"type": "url",
+				"label": "Destination"
+			},
+			{
+				"name": "state",
+				"type": "text",
+				"label": "State"
+			},
+			{
+				"name": "short_url",
+				"type": "url",
+				"label": "Short URL (encoded in the QR code)"
+			},
+			{
+				"name": "folder_id",
+				"type": "text",
+				"label": "Folder ID"
+			},
+			{
+				"name": "created_at",
+				"type": "date",
+				"label": "Created at"
+			},
+			{
+				"name": "updated_at",
+				"type": "date",
+				"label": "Updated at"
+			}
+		]
+	},
+	{
+		"name": "threshold",
+		"type": "uinteger",
+		"label": "Scan threshold"
+	},
+	{
+		"name": "total_scans",
+		"type": "uinteger",
+		"label": "Total scans"
+	}
+]

@@ -1,0 +1,7 @@
+{
+	"url": "/qr/{{parameters.id}}",
+	"method": "GET",
+	"response": {
+		"output": "{{body.data}}"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"url": "/qr/{{parameters.id}}/stats",
+	"method": "GET",
+	"qs": {
+		"from": "{{if(parameters.from; formatDate(parameters.from; 'YYYY-MM-DD'; 'Europe/Paris'); undefined)}}",
+		"to": "{{if(parameters.to; formatDate(parameters.to; 'YYYY-MM-DD'; 'Europe/Paris'); undefined)}}"
+	},
+	"response": {
+		"output": "{{body.data}}"
+	}
+}

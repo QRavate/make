@@ -1,0 +1,105 @@
+{
+	"name": "qravate",
+	"label": "QRavate",
+	"theme": "#ff5b36",
+	"language": "en",
+	"description": "Dynamic QR codes with style: create QR codes, change their destination without reprinting, pause them, read scan stats.",
+	"connection": {
+		"name": "qravate",
+		"label": "QRavate",
+		"type": "Custom",
+		"files": "app/connection"
+	},
+	"webhooks": [
+		{
+			"name": "qrEvents",
+			"label": "QRavate events",
+			"type": "Dedicated, attached",
+			"connection": "qravate",
+			"files": "app/webhooks/qrEvents"
+		}
+	],
+	"rpcs": [
+		{
+			"name": "listQrCodes",
+			"label": "List QR codes",
+			"connection": "qravate",
+			"files": "app/rpcs/listQrCodes"
+		}
+	],
+	"modules": [
+		{
+			"name": "watchQrEvents",
+			"label": "Watch QR Code Events",
+			"description": "Triggers when a QR code is created, changed, paused or reaches a number of scans.",
+			"type": "Instant trigger",
+			"webhook": "qrEvents"
+		},
+		{
+			"name": "createQrCode",
+			"label": "Create a QR Code",
+			"description": "Creates a dynamic QR code.",
+			"type": "Action",
+			"connection": "qravate"
+		},
+		{
+			"name": "updateQrCode",
+			"label": "Update a QR Code",
+			"description": "Changes the destination or the name of a QR code. The printed QR code stays the same.",
+			"type": "Action",
+			"connection": "qravate"
+		},
+		{
+			"name": "setQrCodeState",
+			"label": "Pause or Resume a QR Code",
+			"description": "Scanners see a neutral page while the QR code is paused.",
+			"type": "Action",
+			"connection": "qravate"
+		},
+		{
+			"name": "getQrCode",
+			"label": "Get a QR Code",
+			"description": "Gets a QR code by ID.",
+			"type": "Action",
+			"connection": "qravate"
+		},
+		{
+			"name": "searchQrCodes",
+			"label": "Search QR Codes",
+			"description": "Lists QR codes, newest first, by name, destination or state.",
+			"type": "Search",
+			"connection": "qravate"
+		},
+		{
+			"name": "getQrCodeStats",
+			"label": "Get QR Code Stats",
+			"description": "Gets the scans of a QR code over a period.",
+			"type": "Action",
+			"connection": "qravate"
+		}
+	],
+	"groups": [
+		{
+			"label": "Triggers",
+			"modules": [
+				"watchQrEvents"
+			]
+		},
+		{
+			"label": "QR codes",
+			"modules": [
+				"createQrCode",
+				"updateQrCode",
+				"setQrCodeState",
+				"getQrCode",
+				"searchQrCodes"
+			]
+		},
+		{
+			"label": "Stats",
+			"modules": [
+				"getQrCodeStats"
+			]
+		}
+	]
+}

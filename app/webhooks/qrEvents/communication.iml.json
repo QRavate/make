@@ -1,0 +1,9 @@
+{
+	"output": {
+		"event": "{{body.event}}",
+		"created_at": "{{body.created_at}}",
+		"qr": "{{if(body.event = 'scans.threshold'; body.data.qr; body.data)}}",
+		"threshold": "{{body.data.threshold}}",
+		"total_scans": "{{body.data.total_scans}}"
+	}
+}

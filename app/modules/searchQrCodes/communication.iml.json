@@ -1,0 +1,20 @@
+{
+	"url": "/qr",
+	"method": "GET",
+	"qs": {
+		"search": "{{ifempty(parameters.search; undefined)}}",
+		"state": "{{ifempty(parameters.state; undefined)}}",
+		"limit": 200
+	},
+	"pagination": {
+		"qs": {
+			"cursor": "{{body.next_cursor}}"
+		},
+		"condition": "{{body.next_cursor}}"
+	},
+	"response": {
+		"iterate": "{{body.data}}",
+		"output": "{{item}}",
+		"limit": "{{parameters.limit}}"
+	}
+}

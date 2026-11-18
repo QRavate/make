@@ -1,0 +1,47 @@
+[
+	{
+		"name": "from",
+		"type": "text",
+		"label": "From"
+	},
+	{
+		"name": "to",
+		"type": "text",
+		"label": "To"
+	},
+	{
+		"name": "total",
+		"type": "uinteger",
+		"label": "Total scans"
+	},
+	{
+		"name": "uniques",
+		"type": "uinteger",
+		"label": "Unique visitors"
+	},
+	{
+		"name": "days",
+		"type": "array",
+		"label": "Per day",
+		"spec": {
+			"type": "collection",
+			"spec": [
+				{
+					"name": "day",
+					"type": "text",
+					"label": "Day"
+				},
+				{
+					"name": "scans",
+					"type": "uinteger",
+					"label": "Scans"
+				},
+				{
+					"name": "uniques",
+					"type": "uinteger",
+					"label": "Unique visitors"
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,20 @@
+{
+	"url": "https://www.qravate.com/api/v1/me",
+	"headers": {
+		"Authorization": "Bearer {{parameters.apiKey}}"
+	},
+	"response": {
+		"metadata": {
+			"type": "text",
+			"value": "{{body.workspace.name}}"
+		},
+		"error": {
+			"message": "[{{statusCode}}] {{body.error.message}}"
+		}
+	},
+	"log": {
+		"sanitize": [
+			"request.headers.authorization"
+		]
+	}
+}

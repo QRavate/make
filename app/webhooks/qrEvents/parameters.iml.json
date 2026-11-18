@@ -1,0 +1,35 @@
+[
+	{
+		"name": "event",
+		"type": "select",
+		"label": "Event",
+		"required": true,
+		"options": [
+			{
+				"label": "QR code created",
+				"value": "qr.created"
+			},
+			{
+				"label": "Destination changed",
+				"value": "qr.destination_changed"
+			},
+			{
+				"label": "QR code paused or resumed",
+				"value": "qr.state_changed"
+			},
+			{
+				"label": "Scan threshold reached",
+				"value": "scans.threshold",
+				"nested": [
+					{
+						"name": "scan_threshold",
+						"type": "uinteger",
+						"label": "Number of scans",
+						"required": true,
+						"help": "Triggers once per QR code when its total scans reach this number."
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,10 @@
+{
+	"url": "/qr/{{parameters.id}}",
+	"method": "PATCH",
+	"body": {
+		"state": "{{parameters.state}}"
+	},
+	"response": {
+		"output": "{{body.data}}"
+	}
+}

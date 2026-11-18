@@ -1,0 +1,16 @@
+{
+	"event": "qr.created",
+	"created_at": "2026-11-18T09:30:00.000Z",
+	"qr": {
+		"id": "qr_7f3a2c1b9d",
+		"code": "AB23CD",
+		"name": "Shop window poster",
+		"type": "url",
+		"destination": "https://example.com/spring-menu",
+		"state": "active",
+		"short_url": "HTTPS://QRAVATE.PAGE/AB23CD",
+		"folder_id": null,
+		"created_at": "2026-11-18T09:30:00.000Z",
+		"updated_at": "2026-11-18T09:30:00.000Z"
+	}
+}

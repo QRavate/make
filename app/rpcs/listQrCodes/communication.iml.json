@@ -1,0 +1,14 @@
+{
+	"url": "/qr",
+	"method": "GET",
+	"qs": {
+		"limit": 200
+	},
+	"response": {
+		"iterate": "{{body.data}}",
+		"output": {
+			"label": "{{item.name}} ({{item.code}})",
+			"value": "{{item.id}}"
+		}
+	}
+}

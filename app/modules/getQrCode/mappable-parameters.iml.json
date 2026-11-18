@@ -1,0 +1,10 @@
+[
+	{
+		"name": "id",
+		"type": "select",
+		"label": "QR Code",
+		"options": "rpc://listQrCodes",
+		"required": true,
+		"help": "Pick a QR code, or map its ID from a previous module."
+	}
+]

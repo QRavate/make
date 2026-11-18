@@ -1,0 +1,11 @@
+{
+	"url": "/qr/{{parameters.id}}",
+	"method": "PATCH",
+	"body": {
+		"destination": "{{ifempty(parameters.destination; undefined)}}",
+		"name": "{{ifempty(parameters.name; undefined)}}"
+	},
+	"response": {
+		"output": "{{body.data}}"
+	}
+}

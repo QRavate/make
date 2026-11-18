@@ -1,0 +1,17 @@
+{
+	"url": "/webhooks",
+	"method": "POST",
+	"body": {
+		"url": "{{webhook.url}}",
+		"events": [
+			"{{parameters.event}}"
+		],
+		"scan_threshold": "{{ifempty(parameters.scan_threshold; undefined)}}",
+		"source": "make"
+	},
+	"response": {
+		"data": {
+			"externalHookId": "{{body.data.id}}"
+		}
+	}
+}
